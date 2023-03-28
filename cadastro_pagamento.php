@@ -91,9 +91,9 @@ if (mysqli_num_rows($result) > 0) {
         }
     }
 
-    echo "A soma das dívidas é: " . $soma;
+
 } else {
-    echo "A soma das dívidas é: " . $sub;
+
 }
 
 // Fecha a conexão com o banco de dados
