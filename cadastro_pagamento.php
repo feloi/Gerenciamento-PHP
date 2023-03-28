@@ -1,5 +1,3 @@
-
-
 <?php 
 // Recupera os pagamentoes do formulário
 $cpf = $ano = $pagamento = '';
@@ -60,11 +58,11 @@ if (mysqli_num_rows($result) > 0) {
         echo "Cobrança registrada com sucesso!";
     } else {
         // ano não encontrado, exibe uma mensagem de erro
-        echo "ano não encontrado no cadastro de anuidades!";
+       
     }
 } else {
     // CPF não encontrado, exibe uma mensagem de erro
-    echo "CPF não encontrado no cadastro de associados!";
+
 
 }
 
@@ -117,5 +115,9 @@ mysqli_close($conn);
   <input type="text" id="pagamento" name="pagamento"><br><br>
   
   <input type="submit" name="submit" value="Enviar">
+
+  <?php if (isset($soma) || isset($sub)) { ?>
+  <h2>A soma das dívidas é: <?php echo isset($soma) ? $soma : $sub; ?></h2>
+<?php } ?>
   
 </form>
